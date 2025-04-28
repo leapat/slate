@@ -118,8 +118,7 @@ If you have changed slate to use kramdown, and with GFM, you may need to install
 * Fix language bar truncating languages that overflow screen width
 * Strip HTML tags from ToC title before displaying it in title bar in JS (backup to stripping done in Ruby code) (thanks @atic)
 
-To enable the new clipboard icon, you need to add `code_clipboard: true` to the frontmatter of source/index.html.md.
-See [this line](https://github.com/slatedocs/slate/blame/main/source/index.html.md#L19) for an example of usage.
+To enable the clipboard icon, follow the code changes on this [commit](https://github.com/slatedocs/slate/commit/bae7edc397de199b0d330a3aaf9cd89dbce74f9c). If you always want the clipboard icon enabled, exclude the change in source/index.html.md and exclude `<% if current_page.data.code_clipboard %>` and `<% end %>` in source/layouts/layout.erb.
 
 ## Version 2.6.1
 
